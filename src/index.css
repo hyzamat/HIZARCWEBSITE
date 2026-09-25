@@ -1,0 +1,211 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Readex Pro draws the Arabic letters; Latin text keeps Sora / Manrope */
+  --font-display: 'Sora Variable', 'Readex Pro Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Manrope Variable', 'Readex Pro Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', 'Cascadia Code', Consolas, monospace;
+
+  /* HIZARC light theme */
+  --color-canvas: #ffffff;
+  --color-mist: #f5f8fd;
+  --color-cloud: #eaf0f8;
+  --color-line: #e2e8f2;
+  --color-ink: #081735;
+  --color-ink-2: #22325a;
+  --color-muted: #5a6985;
+  --color-navy: #03204f;
+  --color-brand: #0077fc;
+  --color-brand-2: #3d9bff;
+  --color-sky: #e8f2ff;
+  --color-sky-2: #cfe3ff;
+  --color-fold: #0a3e9e;
+  --color-sand: #94692a;
+  --color-sand-soft: #f8f1e5;
+  --color-success: #12b76a;
+  --color-danger: #f04438;
+  --color-warn: #f79009;
+
+  --shadow-soft: 0 1px 2px rgb(8 23 53 / 0.04), 0 8px 24px -12px rgb(8 23 53 / 0.14);
+  --shadow-lift: 0 2px 6px rgb(8 23 53 / 0.04), 0 28px 56px -24px rgb(8 23 53 / 0.24);
+  --shadow-brand: 0 12px 32px -10px rgb(0 119 252 / 0.5);
+
+  --breakpoint-xs: 380px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-marquee: marquee var(--marquee-duration, 45s) linear infinite;
+  --animate-marquee-reverse: marquee var(--marquee-duration, 45s) linear infinite reverse;
+  --animate-pulse-dot: pulse-dot 2s ease-out infinite;
+  --animate-twinkle: twinkle 3s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-jitter: jitter 2.4s ease-in-out infinite;
+  --animate-blink: blink 1s steps(1) infinite;
+  --animate-dash: dash 1.4s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-50%, 0, 0); }
+  }
+  @keyframes pulse-dot {
+    0% { box-shadow: 0 0 0 0 rgb(0 119 252 / 0.5); }
+    70% { box-shadow: 0 0 0 10px rgb(0 119 252 / 0); }
+    100% { box-shadow: 0 0 0 0 rgb(0 119 252 / 0); }
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.25; }
+    50% { opacity: 1; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -6%, 0); }
+  }
+  @keyframes jitter {
+    0%, 100% { transform: rotate(0deg) translate3d(0, 0, 0); }
+    20% { transform: rotate(-1.5deg) translate3d(-1%, 0, 0); }
+    40% { transform: rotate(1.5deg) translate3d(1%, -1%, 0); }
+    60% { transform: rotate(-1deg) translate3d(0, 1%, 0); }
+    80% { transform: rotate(1deg) translate3d(1%, 0, 0); }
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  @keyframes dash {
+    to { stroke-dashoffset: -10; }
+  }
+}
+
+@layer base {
+  html {
+    background: var(--color-canvas);
+    color-scheme: light;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--color-brand); color: #fff; }
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+  button, a, [role='button'] { touch-action: manipulation; }
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 40rem) { padding-inline: 2rem; }
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(100deg, var(--color-navy) 0%, var(--color-brand) 55%, var(--color-brand-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glass {
+  background: rgb(255 255 255 / 0.78);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+}
+
+@utility grid-lines {
+  background-image:
+    linear-gradient(to right, rgb(8 23 53 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(8 23 53 / 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility dots {
+  background-image: radial-gradient(rgb(8 23 53 / 0.12) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+@utility hairline {
+  border-color: var(--color-line);
+}
+
+@utility pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* Spotlight that follows the pointer / finger (set by SpotlightCard) */
+@utility spotlight {
+  position: relative;
+  isolation: isolate;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: radial-gradient(380px circle at var(--x, 50%) var(--y, 0%), rgb(0 119 252 / 0.1), transparent 45%);
+    opacity: var(--spot, 0);
+    transition: opacity 0.4s ease;
+  }
+}
+
+/* Highlighted words on the dark-blue enquiry section */
+.on-navy .text-gradient {
+  background-image: linear-gradient(100deg, #ffffff 0%, #8fd0ff 45%, #3d9bff 100%);
+}
+
+/* The story illustration is sized in % of its own width, so it scales like one picture */
+.scene {
+  container-type: inline-size;
+}
+
+/* Services "deck": cards stick & stack while scrolling. Falls back to a normal list on very short screens. */
+.stack-card {
+  position: sticky;
+}
+@media (max-height: 620px) {
+  .stack-card { position: relative; top: auto !important; }
+}
+
+/* Arabic: joined letters must not be spaced apart, slanted or squeezed */
+:lang(ar) {
+  letter-spacing: normal;
+}
+:lang(ar) :is(.italic, em, i) {
+  font-style: normal;
+}
+:lang(ar) :is(h1, h2, h3) {
+  line-height: 1.3;
+}
+
+/* A visitor who chose Arabic before doesn't see the English page flash first (shown anyway after 2.5 s) */
+.lang-pending #root {
+  visibility: hidden;
+  animation: lang-reveal 0s linear 2.5s forwards;
+}
+@keyframes lang-reveal {
+  to { visibility: visible; }
+}
+
+/* Intro only plays once per session */
+.intro-seen .preloader { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
