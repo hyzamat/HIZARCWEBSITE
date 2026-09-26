@@ -93,7 +93,14 @@ If you skip the Contact number question, the number is added to the end of the m
 
 ## Deploying
 
-`npm run build` produces a fully static site in `dist/`. Upload it to any static host, for example:
+**The live site (hizarc.com) is published by GitHub Pages.** Every push to `main` rebuilds and republishes it automatically (`.github/workflows/deploy.yml`) — watch progress in the repo's **Actions** tab; a green ✓ means it's live about a minute later.
+
+One-time setup (already done for hizarc.com):
+
+1. Repo **Settings → Pages → Source: GitHub Actions**, and **Custom domain: `hizarc.com`** → Save. Tick **Enforce HTTPS** once it becomes available.
+2. At GoDaddy (DNS for hizarc.com): four `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, and `CNAME` `www` → `hyzamat.github.io`. Leave the Zoho `MX` and `TXT` records alone — they carry the @hizarc.com email.
+
+`npm run build` produces a fully static site in `dist/`, so it can also go on any other static host, for example:
 
 - **Netlify / Cloudflare Pages / Vercel** — build command `npm run build`, output folder `dist`
 - **Any cPanel / shared hosting** — upload the contents of `dist/` to `public_html`
