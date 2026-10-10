@@ -11,6 +11,18 @@ export function UAEFlag({ className }: IconProps) {
   )
 }
 
+export function IndiaFlag({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 9 6" className={className} aria-hidden="true">
+      <rect width="9" height="2" fill="#ff9933" />
+      <rect y="2" width="9" height="2" fill="#fff" />
+      <rect y="4" width="9" height="2" fill="#138808" />
+      <circle cx="4.5" cy="3" r="0.75" fill="none" stroke="#000080" strokeWidth="0.25" />
+      <circle cx="4.5" cy="3" r="0.2" fill="#000080" />
+    </svg>
+  )
+}
+
 export function WhatsAppIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden="true">

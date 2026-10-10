@@ -148,12 +148,13 @@ await png(appIcon(512, { markScale: 0.5 }), 'icon-512.png')
     ${wordmark({ x: 96 + lockW + 26, y: 82 + (lockH - wordH) / 2, height: wordH, fill: '#03204f' })}
   </g>
 
-  <text x="96" y="318" font-family="${FONT}" font-weight="600" font-size="62" letter-spacing="-2" fill="#081735">Engineering the</text>
-  <text x="96" y="394" xml:space="preserve" font-family="${FONT}" font-weight="600" font-size="62" letter-spacing="-2" fill="url(#hl)">digital future<tspan fill="#081735"> from Dubai.</tspan></text>
+  <text x="96" y="290" font-family="${FONT}" font-weight="600" font-size="62" letter-spacing="-2" fill="#081735">Engineering the</text>
+  <text x="96" y="362" font-family="${FONT}" font-weight="600" font-size="62" letter-spacing="-2" fill="url(#hl)">digital future</text>
+  <text x="96" y="434" font-family="${FONT}" font-weight="600" font-size="62" letter-spacing="-2" fill="#081735">from India &amp; UAE.</text>
 
-  <rect x="96" y="452" width="56" height="4" rx="2" fill="url(#bar)"/>
-  <text x="96" y="504" font-family="${FONT}" font-weight="600" font-size="25" fill="#0077fc">Software · Web Apps · Websites · Games</text>
-  <text x="96" y="544" font-family="${FONT}" font-weight="600" font-size="25" fill="#5a6985">IT Support · Infrastructure · Cyber Security · Marketing</text>
+  <rect x="96" y="480" width="56" height="4" rx="2" fill="url(#bar)"/>
+  <text x="96" y="526" font-family="${FONT}" font-weight="600" font-size="25" fill="#0077fc">Software · Web Apps · Websites · Games</text>
+  <text x="96" y="564" font-family="${FONT}" font-weight="600" font-size="25" fill="#5a6985">IT Support · Infrastructure · Cyber Security · Marketing</text>
 </svg>`
 
   await png(svg, 'og-image.png')
@@ -192,7 +193,7 @@ await fs.writeFile(
     {
       name: 'HIZARC — IT & Software Solutions',
       short_name: 'HIZARC',
-      description: 'Dubai-based IT company: custom software, web apps, websites, games, IT support, infrastructure, cyber security and online marketing.',
+      description: 'IT company in India & UAE: custom software, web apps, websites, games, IT support, infrastructure, cyber security and online marketing.',
       start_url: '/',
       scope: '/',
       display: 'standalone',

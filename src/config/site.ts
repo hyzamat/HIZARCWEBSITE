@@ -22,12 +22,13 @@ export const site = {
     ],
     /** WhatsApp number — digits only, country code first, no "+" or spaces */
     whatsapp: '971521374423',
-    address: 'Business Bay, Dubai, United Arab Emirates',
+    address: 'India · UAE',
     /** The same address and hours as shown on the Arabic version of the site */
-    addressAr: 'الخليج التجاري، دبي، الإمارات العربية المتحدة',
+    addressAr: 'الهند · الإمارات',
     hours: 'Mon – Fri · 9:00 – 18:00 (GST)',
-    hoursAr: 'الاثنين – الجمعة · 9:00 – 18:00 (بتوقيت الخليج)',
-    mapUrl: 'https://maps.google.com/?q=Business+Bay,+Dubai',
+    hoursAr: 'الاثنين – الجمعة · 9:00 – 18:00 (بتوقيت الإمارات)',
+    /** Google Maps link for the office — leave empty ('') for no map link. */
+    mapUrl: '',
   },
 
   /**

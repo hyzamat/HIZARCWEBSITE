@@ -87,7 +87,7 @@ export function Dubai() {
   const { accent } = t.dubai
 
   return (
-    <section id="dubai" aria-labelledby="dubai-title" className="relative overflow-hidden pt-24 sm:pt-32">
+    <section id="locations" aria-labelledby="dubai-title" className="relative overflow-hidden pt-24 sm:pt-32">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white via-sand-soft to-sand-soft" />
       <div className="container-x relative">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-16">
@@ -139,14 +139,14 @@ export function Dubai() {
             </motion.div>
             <motion.a
               variants={itemVariants}
-              href={site.contact.mapUrl}
+              href={site.contact.mapUrl || undefined}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-3xl border border-line bg-white p-5 transition-colors hover:border-brand/40 sm:p-6"
+              className={`group rounded-3xl border border-line bg-white p-5 transition-colors sm:p-6 ${site.contact.mapUrl ? 'hover:border-brand/40' : ''}`}
             >
               <MapPin className="size-5 text-brand" />
               <p className="mt-4 text-[11px] uppercase tracking-[0.18em] text-ink/50">{t.dubai.coordinatesLabel}</p>
-              <p dir="ltr" className="mt-1 font-display text-sm font-medium sm:text-base rtl:text-right">
+              <p className="mt-1 font-display text-sm font-medium sm:text-base">
                 {t.dubai.coordinates}
               </p>
             </motion.a>

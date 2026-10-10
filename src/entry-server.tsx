@@ -28,7 +28,7 @@ export function structuredData() {
       '@id': `${url}/#organization`,
       name: site.name,
       description:
-        'Dubai-based IT company providing custom web applications, software development, websites, IT services & support, online marketing, custom game development, infrastructure design and cyber security.',
+        'IT company in India and the UAE providing custom web applications, software development, websites, IT services & support, online marketing, custom game development, infrastructure design and cyber security.',
       url: `${url}/`,
       logo: `${url}/icon-512.png`,
       image: `${url}/og-image.png`,
@@ -38,17 +38,10 @@ export function structuredData() {
         '@type': 'ContactPoint',
         telephone: p.number.replace(/\s/g, ''),
         contactType: 'customer service',
-        areaServed: 'AE',
+        areaServed: ['IN', 'AE'],
         availableLanguage: p.lang === 'ar' ? 'Arabic' : 'English',
       })),
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: site.contact.address.split(',')[0],
-        addressLocality: 'Dubai',
-        addressRegion: 'Dubai',
-        addressCountry: 'AE',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 25.2048, longitude: 55.2708 },
+      address: ['IN', 'AE'].map((addressCountry) => ({ '@type': 'PostalAddress', addressCountry })),
       openingHoursSpecification: {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

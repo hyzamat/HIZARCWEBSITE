@@ -35,7 +35,7 @@ export function Contact() {
     {
       label: t.contact.office,
       icon: <MapPin className="size-5" />,
-      links: [{ text: office.address, href: site.contact.mapUrl, external: true }],
+      links: [{ text: office.address, href: site.contact.mapUrl, external: !!site.contact.mapUrl }],
     },
   ]
 
@@ -74,9 +74,9 @@ export function Contact() {
                   {d.links.map((l) => (
                     <a
                       key={l.href}
-                      href={l.href}
+                      href={l.href || undefined}
                       {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                      className="flex flex-wrap items-center gap-x-2.5 py-0.5 text-[15px] font-semibold leading-snug text-white/85 transition-colors [overflow-wrap:anywhere] hover:text-white sm:text-base"
+                      className={`flex flex-wrap items-center gap-x-2.5 py-0.5 text-[15px] font-semibold leading-snug text-white/85 transition-colors [overflow-wrap:anywhere] sm:text-base ${l.href ? 'hover:text-white' : ''}`}
                     >
                       <span dir={l.ltr ? 'ltr' : undefined}>{l.text}</span>
                       {l.tag && (

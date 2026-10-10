@@ -8,9 +8,9 @@
 
 export const en = {
   meta: {
-    title: 'HIZARC | IT Company in Dubai — Software, Websites, Games & Cyber Security',
+    title: 'HIZARC | IT Company in India & UAE — Software, Websites, Games & Cyber Security',
     description:
-      'HIZARC is a Dubai-based IT company building custom web applications, software, websites and games — plus IT support, infrastructure design, cyber security and online marketing across the UAE & GCC.',
+      'HIZARC is an IT company in India and the UAE building custom web applications, software, websites and games — plus IT support, infrastructure design, cyber security and online marketing.',
   },
 
   common: {
@@ -34,7 +34,7 @@ export const en = {
     menu: 'Menu',
     open: 'Open menu',
     close: 'Close menu',
-    links: { story: 'How we work', services: 'Services', why: 'Why HIZARC', dubai: 'Dubai', faq: 'FAQ' },
+    links: { story: 'How we work', services: 'Services', why: 'Why HIZARC', dubai: 'India · UAE', faq: 'FAQ' },
     about: 'About',
     contact: 'Contact',
   },
@@ -50,12 +50,12 @@ export const en = {
 
   hero: {
     label: 'Introduction',
-    place: 'Dubai, UAE',
+    place: 'India · UAE',
     kind: 'IT & Software Company',
-    title: 'Engineering the digital future from Dubai.',
+    title: 'Engineering the digital future from India & UAE.',
     /** words of the title drawn in the blue gradient */
     highlight: 'digital future',
-    lead: 'HIZARC designs, builds and secures the technology behind ambitious businesses — custom software, web apps, websites, games and IT infrastructure, delivered from Dubai to the world.',
+    lead: 'HIZARC designs, builds and secures the technology behind ambitious businesses — custom software, web apps, websites, games and IT infrastructure, delivered from India and the UAE to the world.',
     cta: 'Start a project',
     how: 'See how we work',
     highlights: [
@@ -142,9 +142,9 @@ export const en = {
   about: {
     eyebrow: 'About HIZARC',
     statement:
-      'HIZARC is a Dubai-based technology partner. We blend strategy, design and engineering to build software, websites and games — and the secure infrastructure that keeps them running. One team for every layer of your digital business.',
+      'HIZARC is a technology partner in India and the UAE. We blend strategy, design and engineering to build software, websites and games — and the secure infrastructure that keeps them running. One team for every layer of your digital business.',
     /** words of the statement drawn in blue (write them exactly as they appear, punctuation included) */
-    emphasis: ['technology', 'partner.', 'software,', 'websites', 'games', 'secure', 'infrastructure', 'One', 'team'],
+    emphasis: ['technology', 'partner', 'software,', 'websites', 'games', 'secure', 'infrastructure', 'One', 'team'],
   },
 
   marquee: {
@@ -303,7 +303,7 @@ export const en = {
       },
       local: {
         title: 'Local team, global standards',
-        text: 'Dubai-based, bilingual and on-site when you need us — delivering to international best practice.',
+        text: 'Across India and the UAE, bilingual and on-site when you need us — delivering to international best practice.',
       },
     },
     show: (title: string) => `Show “${title}”`,
@@ -321,22 +321,22 @@ export const en = {
   },
 
   dubai: {
-    eyebrow: 'Based in Dubai',
-    title: 'Rooted in Dubai. Built for the world.',
-    highlight: 'Dubai.',
+    eyebrow: 'India · UAE',
+    title: 'Rooted in India & UAE. Built for the world.',
+    highlight: 'India & UAE.',
     /** the small line under the title, shown in the other language */
-    accent: { text: 'من دبي إلى العالم', lang: 'ar', dir: 'rtl' },
-    lead: "From the region's most ambitious city, we partner with businesses across the UAE, the GCC and beyond — with the responsiveness of a local team and the standards of a global one.",
-    time: 'Dubai time · GST',
+    accent: { text: 'من الهند والإمارات إلى العالم', lang: 'ar', dir: 'rtl' },
+    lead: 'From India and the UAE, we partner with businesses around the world — with the responsiveness of a local team and the standards of a global one.',
+    time: 'UAE time · GST',
     checking: 'Checking office hours…',
     open: 'Our team is online right now',
     closed: 'Office closed — we reply next business day',
-    coordinatesLabel: 'Coordinates',
-    coordinates: '25.2048° N, 55.2708° E',
+    coordinatesLabel: 'Locations',
+    coordinates: 'India · UAE',
     hoursLabel: 'Office hours',
     serving: 'Serving',
-    regions: ['United Arab Emirates', 'Saudi Arabia', 'Qatar', 'Oman', 'Bahrain', 'Kuwait', 'Worldwide'],
-    skyline: 'Illustrated Dubai skyline',
+    regions: ['India', 'United Arab Emirates', 'Worldwide'],
+    skyline: 'Illustrated city skyline',
   },
 
   faq: {
@@ -363,8 +363,8 @@ export const en = {
         a: 'Absolutely. We offer monthly support plans and Annual Maintenance Contracts covering helpdesk, on-site visits, monitoring, backups, updates and security — tailored to the size of your team.',
       },
       {
-        q: 'Do you work with clients outside Dubai?',
-        a: 'Yes. We support businesses across all seven emirates, the wider GCC and internationally — remotely, or on-site where the project needs it.',
+        q: 'Do you work with international clients?',
+        a: 'Yes. We support businesses across India, the UAE and internationally — remotely, or on-site where the project needs it.',
       },
       {
         q: 'Will I own the source code and designs?',
@@ -418,13 +418,13 @@ export const en = {
 
   footer: {
     blurb:
-      'Custom software, web applications, websites, games, infrastructure, cyber security, IT support and online marketing — engineered in Dubai for businesses across the UAE, GCC and beyond.',
+      'Custom software, web applications, websites, games, infrastructure, cyber security, IT support and online marketing — engineered for businesses across India, the UAE and beyond.',
     social: (network: string) => `HIZARC on ${network}`,
     services: 'Services',
     company: 'Company',
     touch: 'Get in touch',
     rights: (year: number, name: string) => `© ${year} ${name}. All rights reserved.`,
-    proudly: 'Proudly based in Dubai, UAE',
+    proudly: 'India · UAE',
   },
 }
 

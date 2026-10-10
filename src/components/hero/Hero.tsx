@@ -5,7 +5,7 @@ import { NetworkCanvas } from './NetworkCanvas'
 import { HeroMark } from './HeroMark'
 import { Button } from '../ui/Button'
 import { EASE, SplitWords, useIntroDone, useScrollRange } from '../ui/motion'
-import { UAEFlag } from '../ui/icons'
+import { IndiaFlag, UAEFlag } from '../ui/icons'
 import { useI18n } from '../../i18n'
 
 export function Hero() {
@@ -45,7 +45,10 @@ export function Hero() {
             {...fadeUp(0)}
             className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/80 py-1.5 pe-4 ps-2 text-xs font-semibold text-ink/75 shadow-soft backdrop-blur sm:text-[13px]"
           >
-            <UAEFlag className="h-3 w-6 rounded-[3px]" />
+            <span className="flex items-center gap-1">
+              <IndiaFlag className="h-3 w-[18px] rounded-[3px]" />
+              <UAEFlag className="h-3 w-6 rounded-[3px]" />
+            </span>
             {t.hero.place}
             <span className="h-3 w-px bg-ink/15" />
             <span className="flex items-center gap-2">

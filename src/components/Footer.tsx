@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { motion, useScroll } from 'motion/react'
 import { ArrowUp } from 'lucide-react'
 import { Logo, WORDMARK_PATH, WORDMARK_VIEWBOX } from './brand/Logo'
-import { FacebookIcon, InstagramIcon, LinkedInIcon, UAEFlag, XIcon } from './ui/icons'
+import { FacebookIcon, IndiaFlag, InstagramIcon, LinkedInIcon, UAEFlag, XIcon } from './ui/icons'
 import { useScrollRange } from './ui/motion'
 import { navLinks, services } from '../data/content'
 import { mailLink, site, telLink, whatsappLink } from '../config/site'
@@ -124,6 +124,7 @@ export function Footer() {
           <p>{t.footer.rights(year, site.name)}</p>
           <div className="flex items-center justify-between gap-6">
             <p className="flex items-center gap-2">
+              <IndiaFlag className="h-2.5 w-[15px] rounded-[2px]" />
               <UAEFlag className="h-2.5 w-5 rounded-[2px]" /> {t.footer.proudly}
             </p>
             <a

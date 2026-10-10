@@ -30,7 +30,7 @@ export const navLinks = [
   { id: 'story', href: '#story' },
   { id: 'services', href: '#services' },
   { id: 'why', href: '#why' },
-  { id: 'dubai', href: '#dubai' },
+  { id: 'dubai', href: '#locations' },
   { id: 'faq', href: '#faq' },
 ] as const
 
